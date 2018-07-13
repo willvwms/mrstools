@@ -1,0 +1,167 @@
+abdomen	985
+active shorts	8
+active undergarment	2845
+agent provocateur	3
+aggression	27
+ankle	1
+aqua	1
+arm	691
+athlete	1
+audio	1
+azure	1
+back	24
+bandage	1
+barechestedness	1822
+beard	19
+belt	1
+black	29
+black and white	1
+black hair	14
+blond	1
+blue	53
+body man	1273
+bodybuilder	354
+bodybuilding	39
+bottle	1
+boxing glove	40
+boy	398
+brand	7
+brassiere	4
+briefs	1221
+calf	7
+cheek	49
+chest	564
+chest hair	50
+chin	107
+close up	45
+clothing	45
+cobalt blue	4
+collegiate wrestling	12
+competition	4
+costume	4
+denim	8
+drink	2
+ear	1
+electric blue	18
+erotic	8
+eyewear	7
+facial hair	264
+fashion	4
+fashion accessory	4
+fashion model	13
+fetish model	229
+finger	136
+firearm	1
+fitness and figure competition	2
+fitness professional	7
+flesh	48
+folk wrestling	42
+font	7
+footwear	39
+fun	1
+g string	86
+garter	14
+gas mask	2
+girdle	1
+girl	75
+goggles	1
+green	7
+gun	1
+gun accessory	2
+hand	191
+handgun holster	2
+headgear	19
+hip	105
+human	4
+human body	28
+human hair color	3
+human leg	92
+interaction	1
+jeans	25
+joint	635
+knee	38
+latex	28
+latex clothing	131
+leather	37
+leg	234
+leggings	41
+lingerie	511
+lip	1
+male	1812
+man	1780
+mask	3
+material	99
+metal	1
+miniskirt	1
+model	566
+monochrome photography	1
+mouth	98
+muscle	2438
+nail	2
+neck	282
+orange	15
+organ	5
+outerwear	58
+pain	35
+pantyhose	4
+performance	2
+personal protective equipment	12
+physical fitness	28
+pink	3
+pocket	3
+pradal serey	9
+product	128
+product design	8
+profession	1
+professional wrestling	1
+protective gear in sports	4
+purple	13
+red	18
+room	2
+shoe	3
+shorts	189
+shoulder	403
+sleeve	7
+sleeveless shirt	27
+snout	2
+sock	1
+soubrette	1
+spandex	12
+sport venue	6
+sports uniform	66
+sportswear	173
+standing	402
+stocking	7
+stomach	45
+strap	7
+structure	5
+sunglasses	1
+supermodel	5
+swim brief	143
+swimsuit bottom	167
+swimsuit top	6
+swimwear	6
+t shirt	62
+tattoo	15
+textile	5
+thigh	588
+thumb	1
+tights	105
+trousers	20
+trunk	29
+trunks	150
+turquoise	1
+undergarment	1855
+underpants	798
+uniform	1
+vehicle	1
+waist	179
+weapon	1
+weight training	2
+wetsuit	4
+white	2
+wrestler	563
+wrestling singlet	355
+wrist	20
+wristband	2
+yellow	80

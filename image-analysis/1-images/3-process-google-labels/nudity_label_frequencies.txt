@@ -1,0 +1,228 @@
+abdomen	1181
+action figure	3
+active undergarment	1822
+adventure	5
+adventurer	1
+aggression	181
+arm	2481
+army	1
+art	1
+athlete	1
+audio	4
+audio equipment	3
+back	52
+barechestedness	4861
+beard	277
+beauty	1
+bicycle clothing	1
+bicycle helmet	1
+black	44
+black and white	15
+black hair	88
+blood	4
+blue	25
+body man	1459
+bodybuilder	819
+bodybuilding	107
+boxing	1
+boxing equipment	3
+boxing glove	41
+boxing ring	8
+boy	931
+briefs	808
+calf	2
+cap	5
+car	9
+cheek	166
+chest	2169
+chest hair	414
+chin	666
+close up	87
+clothing	10
+collegiate wrestling	3
+competition	17
+cool	6
+costume	12
+crowd	1
+dancer	1
+darkness	3
+denim	5
+drink	4
+drinking	2
+ear	15
+erotic	1
+erotic literature	1
+event	4
+eyebrow	5
+eyewear	40
+face	2
+facial hair	1436
+fashion	26
+fashion accessory	1
+fashion model	29
+festival	1
+fetish model	513
+fictional character	2
+finger	622
+firearm	1
+fitness professional	11
+flesh	353
+flooring	2
+folk wrestling	46
+foot	1
+footwear	56
+forehead	13
+forest	5
+fun	8
+g string	15
+gang	3
+garter	3
+gas mask	6
+gentleman	1
+girl	133
+gladiator	1
+glasses	8
+go go dancing	2
+grass	17
+green	6
+gun	2
+hair	9
+hairstyle	3
+hand	1156
+hat	2
+head	12
+headgear	63
+hip	7
+human	30
+human body	258
+human hair color	8
+human leg	67
+interaction	18
+jaw	5
+jeans	19
+jewellery	2
+joint	497
+jungle	14
+kilt	3
+knee	12
+latex	49
+latex clothing	145
+leather	3
+leg	646
+leggings	13
+lingerie	225
+lip	2
+little black dress	1
+male	3858
+mammal	4
+man	4099
+mask	19
+masque	6
+material	238
+mercenary	1
+metal	1
+microphone	1
+midnight	1
+military	2
+military police	1
+militia	1
+miniskirt	2
+mode of transport	1
+model	721
+monochrome photography	10
+motor vehicle	2
+moustache	10
+mouth	1170
+muscle	4704
+music	5
+music artist	1
+musical instrument	2
+musical instrument accessory	1
+musician	5
+nail	2
+neck	1417
+necklace	1
+net	2
+nose	8
+orange	1
+organ	178
+outerwear	54
+pain	254
+pantyhose	1
+pattern	2
+performance	62
+performance art	5
+performing arts	5
+personal protective equipment	26
+photograph	1
+photography	2
+physical fitness	74
+pink	1
+plant	1
+pradal serey	124
+pride parade	3
+product	26
+profession	16
+professional wrestling	7
+protective gear in sports	1
+public event	3
+purple	4
+race	2
+recreation	1
+red	1
+room	7
+shoe	1
+shorts	49
+shoulder	400
+sitting	4
+skin	1
+sleeve	12
+sleeveless shirt	7
+snout	14
+socialite	43
+soldier	2
+sport venue	21
+sports uniform	4
+sportswear	21
+stage	8
+standing	537
+stemware	1
+stomach	33
+street	3
+string instrument	3
+structure	8
+sunglasses	11
+supermodel	3
+swim brief	17
+swimsuit bottom	11
+swimwear	2
+t shirt	107
+tattoo	205
+tattoo artist	3
+textile	10
+thigh	342
+thumb	9
+tights	30
+tree	16
+trousers	2
+trunk	209
+trunks	12
+undergarment	1249
+underpants	352
+vacation	2
+vehicle	9
+vision care	6
+waist	23
+water	4
+weapon	2
+weight training	2
+wetsuit	2
+wilderness	2
+women's erotica	7
+woodland	1
+wrestler	795
+wrestling	2
+wrestling singlet	202
+wrist	21
+yellow	26
+zombie	1

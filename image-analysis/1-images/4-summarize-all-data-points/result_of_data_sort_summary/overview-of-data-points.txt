@@ -1,0 +1,109 @@
+============================================================
+(1) DEEP AI:    NSFW RATING (0.0 - 1.0):
+
+Unclassified:                0 images
+Range 0.0 to 0.1:         2955 images   < 26% >
+Range 0.101 to 0.2:        814 images   < 7% >
+Range 0.201 to 0.3:        589 images   < 5% >
+Range 0.301 to 0.4:        536 images   < 5% >
+Range 0.401 to 0.5:        444 images   < 4% >
+Range 0.501 to 0.6:        467 images   < 4% >
+Range 0.601 to 0.7:        515 images   < 5% >
+Range 0.701 to 0.8:        588 images   < 5% >
+Range 0.801 to 0.9:        744 images   < 7% >
+Range 0.901 to 1.0:       3736 images   < 33% >
+
+Total:                   11388 images
+
+
+
+============================================================
+(2) GOOGLE CLOUD VISION:        IMAGE CONTENT LABELS
+
+
+        ----------------------------------------------------
+        2(a) Individual Label Scores (0.00 - 1.00):
+
+        Unclassified:                0 scores
+        Range 0.0 to 0.1:            0 scores   < 0% >
+        Range 0.1 to 0.2:            0 scores   < 0% >
+        Range 0.2 to 0.3:            0 scores   < 0% >
+        Range 0.3 to 0.4:            0 scores   < 0% >
+        Range 0.4 to 0.5:          472 scores   < 0% >
+        Range 0.5 to 0.6:        12396 scores   < 13% >
+        Range 0.6 to 0.7:        20628 scores   < 22% >
+        Range 0.7 to 0.8:        25572 scores   < 27% >
+        Range 0.8 to 0.9:        24140 scores   < 25% >
+        Range 0.9 to 1.0:        12658 scores   < 13% >
+
+        Total:                   95866 scores
+        ----------------------------------------------------
+
+
+        ----------------------------------------------------
+        2(b) Number of Labels per Image (0 - 10):
+
+        Unclassified:                0 images
+        0 labels:                   66 images   < 1% >
+        1 labels:                  118 images   < 1% >
+        2 labels:                  239 images   < 2% >
+        3 labels:                  344 images   < 3% >
+        4 labels:                  503 images   < 4% >
+        5 labels:                  580 images   < 5% >
+        6 labels:                  548 images   < 5% >
+        7 labels:                  621 images   < 5% >
+        8 labels:                  674 images   < 6% >
+        9 labels:                  651 images   < 6% >
+        10 labels:                7044 images   < 62% >
+
+        Total:                   11388 images
+        ----------------------------------------------------
+
+
+
+============================================================
+(3) GOOGLE CLOUD VISION: ADULT
+
+Unclassified:                0 images
+Rated 0:                     8 images   < 0% >
+Rated 1:                  2750 images   < 24% >
+Rated 2:                  3273 images   < 29% >
+Rated 3:                  1360 images   < 12% >
+Rated 4:                   994 images   < 9% >
+Rated 5:                  3003 images   < 26% >
+
+Total:                   11388 images
+
+
+
+============================================================
+(4) GOOGLE CLOUD VISION: RACY
+
+Unclassified:                0 images
+Rated 0:                     8 images   < 0% >
+Rated 1:                  1203 images   < 11% >
+Rated 2:                  1354 images   < 12% >
+Rated 3:                  1335 images   < 12% >
+Rated 4:                  1457 images   < 13% >
+Rated 5:                  6031 images   < 53% >
+
+Total:                   11388 images
+
+
+
+============================================================
+(5) GOOGLE CLOUD VISION: MEDICAL
+
+Unclassified:                0 images
+Rated 0:                     8 images   < 0% >
+Rated 1:                  5601 images   < 49% >
+Rated 2:                  3733 images   < 33% >
+Rated 3:                  1361 images   < 12% >
+Rated 4:                   522 images   < 5% >
+Rated 5:                   163 images   < 1% >
+
+Total:                   11388 images
+
+
+
+============================================================
