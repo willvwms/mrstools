@@ -154,7 +154,7 @@ with open(filename, 'w') as f:
 # --------------------------------------------------------------------------------
 current = product_dictionary
 
-if len(change_log_COPY['items']) > len(change_log_['items']):
+if len(change_log_COPY['items']) > len(change_log['items']):
 
 	for key, value in current.items():
 		if key not in previous.keys():
@@ -180,7 +180,7 @@ else:
 new_entries_index = len(change_log['items'])
 new_changes_slice = change_log_COPY['items'][new_entries_index:]
 print(("-"*80))
-print("PRODUCTS DELETED:")
+print("PRODUCTS CHANGED:")
 print(json.dumps(new_changes_slice, indent=1))
 print(("-"*80))
 
