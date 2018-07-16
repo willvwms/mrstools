@@ -1,16 +1,20 @@
-import pickle
+import json
 import webbrowser
-import requests
 
-with open('00_COMPLETE_PRODUCT_DATA_LIST.pickle', 'rb') as f:
-    products = pickle.load(f)
+keepgoing = True
 
-urls = list()
-[urls.append({"url": x['url'], "sku":x['sku']}) for x in products]
+with open('previous-scrape.json', 'r') as f:
+    products = json.load(f)
 
-skus = True
+def open(sku):
+	try:
+		url = products[sku]['url']
+		webbrowser.open_new(url)
+	except:
+		print("Couldn't open {}".format(sku))
 
-while skus:
-	raw = input("Next series of skus:")
+while keepgoing:
+	raw = input("View/open sku(s):")
 	skus = raw.upper().split(" ")
-	[webbrowser.open(x['url']) for x in urls if x['sku'] in skus]
+	for sku in skus:
+		open(sku)

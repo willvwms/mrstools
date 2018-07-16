@@ -13,7 +13,7 @@ import json
 # --------------------------------------------------------------------------------
 # GLOBAL VARIABLES, FUNCTIONS
 # --------------------------------------------------------------------------------
-directory = "C:/Users/mrs.BradBlandin-PC/Desktop"
+# directory = "C:/Users/mrs.BradBlandin-PC/Desktop"
 now = datetime.now()
 date, time = now.strftime("%m-%d-%y"), now.strftime("%I:%M %p") # 03/13/28, 10:10 AM
 filename = "{}_scrape.json".format(date)
@@ -52,14 +52,14 @@ counter, URLs, skipped_urls, products_array, non_items = 1, list(), list(), list
 # --------------------------------------------------------------------------------
 # HYDRATE THE PREVIOUS COMPARISON OBJECT
 # --------------------------------------------------------------------------------
-with open('00-previous-scrape.json', 'r') as f:
+with open('previous-scrape.json', 'r') as f:
     previous = json.load(f)
 
 # --------------------------------------------------------------------------------
 # HYDRATE CHANGE LOG & COPY IT
 # --------------------------------------------------------------------------------
 try:
-	with open('01-change_log.json', 'r') as f:
+	with open('change_log.json', 'r') as f:
 	    change_log = json.load(f)
 except:
 	change_log = {}
@@ -69,7 +69,6 @@ change_log_COPY = change_log.copy()
 # --------------------------------------------------------------------------------
 # HIT SITEMAP, BUILD LIST OF URLS, FILTER OUT CATEGORY ENDPOINTS
 # --------------------------------------------------------------------------------
-
 raw_xml = requests.get("https://www.mr-s-leather.com/sitemap.xml").text
 parsed_xml = BeautifulSoup(raw_xml, 'lxml')
 urls_soup_object = parsed_xml.body.find_all('loc')
@@ -146,7 +145,7 @@ product_dictionary = dict()
 [product_dictionary.update({item['sku']:item}) for item in products_array]
 
 # Serialize as JSON
-os.chdir(directory)
+# os.chdir('directory')
 with open(filename, 'w') as f:
 	json.dump(product_dictionary, f, indent=1)
 
@@ -155,53 +154,43 @@ with open(filename, 'w') as f:
 # --------------------------------------------------------------------------------
 current = product_dictionary
 
-if len(change_log_COPY['added']) > 0 and len(change_log_COPY['deleted']) > 0:
+if len(change_log_COPY['items']) > len(change_log_['items']):
 
 	for key, value in current.items():
 		if key not in previous.keys():
-			change_log_COPY['added'].append(value)
-			new_index = len(change_log_COPY['added'])-1
-			change_log_COPY['added'][new_index]['date'] = date.replace("-","/")
-
+			change_log_COPY['items'].append(value)
+			new_index = len(change_log_COPY['items'])-1
+			change_log_COPY['items'][new_index]['date'] = date.replace("-","/")
+			change_log_COPY['items'][new_index]['action'] = 'add'
 
 	for key, value in previous.items():
 		if key not in current.keys():
-			change_log_COPY['deleted'].append(value)
-			new_index = len(change_log_COPY['deleted'])-1
-			change_log_COPY['deleted'][new_index]['date'] = date.replace("-","/")
+			change_log_COPY['items'].append(value)
+			new_index = len(change_log_COPY['items'])-1
+			change_log_COPY['items'][new_index]['date'] = date.replace("-","/")
+			change_log_COPY['items'][new_index]['action'] = 'deactivate'
 
-	with open("01-change_log.json", 'w') as f:
+	with open("change_log.json", 'w') as f:
 		json.dump(change_log_COPY, f, indent=1)
 
 else:
 	print("ERROR: THE CHANGE LOG PROBABLY DIDN'T LOAD CORRECTLY")
 
-
 # For display purposes:
-index_of_new_added = len(change_log['added'])
-index_of_new_deleted = len(change_log['deleted'])
-
-new_additions_slice = change_log_COPY['added'][index_of_new_added:]
-new_deletions_slice = change_log_COPY['deleted'][index_of_new_deleted:]
-
+new_entries_index = len(change_log['items'])
+new_changes_slice = change_log_COPY['items'][new_entries_index:]
 print(("-"*80))
 print("PRODUCTS DELETED:")
-print(json.dumps(new_deletions_slice, indent=2))
+print(json.dumps(new_changes_slice, indent=1))
 print(("-"*80))
 
-print()
-
-print(("-"*80))
-print("PRODUCTS ADDED:")
-print(json.dumps(new_additions_slice, indent=2))
-print(("-"*80))
 
 # --------------------------------------------------------------------------------
 # ASSIGN CATEGORIES TO EVERY ITEM, THEN CHECK FOR ORPHAN ITEMS
 # --------------------------------------------------------------------------------
 
 # Hydrate Categories data object
-with open('category-snapshot.json', 'r') as f:
+with open('category-inventory.json', 'r') as f:
     categories = json.load(f)
 
 # Run through list of items
@@ -226,8 +215,8 @@ print("-"*80)
 # OVER-WRITE THE COMPARISON OBJECT & UPDATE THE CHANGE LOG
 # --------------------------------------------------------------------------------
 # Ensure the new data isn't blank or somehow screwed up
-if len(product_dictionary) > 1100:
-	with open('00-previous-scrape.json', 'w') as f:
+if len(product_dictionary) > 1600:
+	with open('previous-scrape.json', 'w') as f:
 		json.dump(product_dictionary, f, indent=1)
 else:
 	print("ERROR: DID NOT OVERWRITE COMPARISON OBJECT -- SCRAPE PROBABLY DIDN'T HAPPEN CORRECTLY")
