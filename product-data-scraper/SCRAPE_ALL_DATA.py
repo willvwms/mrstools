@@ -88,7 +88,9 @@ for url in item_urls:
 		else:
 			manufacturer = ''
 
+		deploy_url = url
 		ID = str(soup.find("div", {"class":"price-final_price"})['data-product-id'])
+		edit_url = "https://www.mr-s-leather.com/mslpanel/catalog/product/edit/id/{}/key/b44ab2d7422184f5cf18e0f393136f027ea29e5b3c32c95e3f292e8fce0abe47/".format(ID)
 		sku = soup.find(attrs={ "itemprop" : "sku" }).get_text(strip=True)
 		name = soup.find(attrs={'itemprop':'name'}).get_text(strip=True)
 		description = unidecode(str(soup.find(id="product-details").get_text('\n\n', strip=True)))
@@ -112,7 +114,8 @@ for url in item_urls:
 		item = {
 			"id": ID,
 			"sku": sku,
-			"url": url,
+			"deploy_url": deploy_url,
+			"edit_url" : edit_url,
 			"name": name,
 			"manufacturer": manufacturer,
 			"description": description,
@@ -210,5 +213,5 @@ print("-"*80)
 with open("./scrape-archive/scrape__{}__{}.json".format(date, time), 'w') as f:
 	json.dump(product_dictionary, f, indent=1)
 # 2: over-write 'previous scrape' for future comparison
-with open('previous-scrape.json', 'w') as f:
+with open('last-scrape.json', 'w') as f:
 	json.dump(product_dictionary, f, indent=1)

@@ -1,5 +1,7 @@
 import json
 import webbrowser
+with open("s:/internet sales office/web/credentials/magento.json", "r") as f:
+    kw = json.load(f)
 
 # ----------------------------------------------------------------
 # BUILD OBJECT OF PRODUCT DATA FOR ACTIVE AND INACTIVE ITEMS:
@@ -21,28 +23,46 @@ for value in inactives:
 for key, value in actives.items():
 	products.update( { key : value } )
 
-urls = dict()
+# Build two comprehensive dictionaries of the edit and view links:
+edit_urls = dict()
 
 for i in products:
 	sku = i
 	ID = products[i]['id']
-	url = "https://www.mr-s-leather.com/mslpanel/catalog/product/edit/id/{}/key/b44ab2d7422184f5cf18e0f393136f027ea29e5b3c32c95e3f292e8fce0abe47/".format(ID)
-	urls.update({sku: url})
+	editURL = "https://www.mr-s-leather.com/mslpanel/catalog/product/edit/id/{}/key/b44ab2d7422184f5cf18e0f393136f027ea29e5b3c32c95e3f292e8fce0abe47/".format(ID)
+	edit_urls.update({sku: editURL})
+
+def view(sku):
+	try:
+		url = products[sku]['url']
+		webbrowser.open_new(url)
+	except:
+		print("Couldn't open {}".format(sku))
 
 def edit(sku):
 	try:
-		url = urls[sku]
+		url = edit_urls[sku]
 		webbrowser.open_new(url)
 	except:
 		print("Couldn't open {}".format(sku))
 
 # ----------------------------------------------------------------
-# MAIN PROCESS:
+# MAIN PROCESS
 # ----------------------------------------------------------------
+print(kw['login'])
 
 keepgoing = True
+
 while keepgoing:
-	raw = input("Edit sku(s):")
+	raw = input("View (v) / edit(e) SKUs:")
 	skus = raw.upper().split(" ")
-	for sku in skus:
-		edit(sku)
+	if skus[0] == 'E' or skus[0] == "EDIT":
+		for sku in skus[1:]:
+			edit(sku)
+	elif skus[0] == 'V' or skus[0] == "VIEW":
+		for sku in skus[1:]:
+			view(sku)
+	else:
+		print("Preface your list of SKUs with either \"view (v)\" or \"edit (e)\"")
+
+
